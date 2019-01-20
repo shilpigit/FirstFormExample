@@ -1,0 +1,39 @@
+<form #createEmployee="ngForm" >
+<div class="panel panel-primary">
+  <div class="panel-heading">
+      <h3 class="panel-title">Create Employee</h3>
+  </div>
+  <div class="panel-body">
+    <div class="form-group">
+      <label for="firstName">First Name</label>
+      <input required type="text" id="firstName" class="form-control" ngModel #firstName="ngModel" name="firstName" (change)="formValues(firstName)">
+    </div>
+    <div class="form-group">
+      <label for="lastName">Last Name</label>
+      <input type="text" id="lastName" class="form-control" [(ngModel)]="lastName" name="lastName">
+    </div>
+    <button class="btn btn-primary">Submit</button>
+  </div>
+  <br>
+  <div class="panel-heading">
+    <h3 class="panel-title">Control Level</h3>
+  </div>  
+  <div>Touched Property: {{firstName.touched}} </div>
+  <div>UnTouched Property: {{firstName.untouched}} </div>
+  <div>Dirty Property: {{firstName.dirty}} </div>
+  <div>Pristine Property: {{firstName.pristine}} </div>
+  <div>Valid Property: {{firstName.valid}} </div>
+  <div>InValid Property: {{firstName.invalid}} </div>
+
+  <br>
+  <div class="panel-heading">
+    <h3 class="panel-title">Form Level</h3>
+  </div>  
+  <div>Touched Property: {{createEmployee.touched}} </div>
+  <div>UnTouched Property: {{createEmployee.untouched}} </div>
+  <div>Dirty Property: {{createEmployee.dirty}} </div>
+  <div>Pristine Property: {{createEmployee.pristine}} </div>
+  <div>Valid Property: {{createEmployee.valid}} </div>
+  <div>InValid Property: {{createEmployee.invalid}} </div>
+</div>
+</form>
