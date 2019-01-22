@@ -8,10 +8,11 @@ import { CreateEmployeeComponent } from '../employee/create-employee.component';
 export class CanDeactivateService implements CanDeactivate<CreateEmployeeComponent> {
   canDeactivate(component: CreateEmployeeComponent) : boolean {
     
-    // if(component.createEmployeeForm.dirty)
-    // {
-    //   return true;
-    // }
+    if(component.createEmployeeForm.dirty)
+    //if(component.flag == true)
+    {
+      return confirm("Are you sure you want to left this page");
+    }
     return true;
   }
   

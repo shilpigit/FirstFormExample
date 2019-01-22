@@ -8,6 +8,8 @@ import { NgForm } from '@angular/forms';
 })
 export class CreateEmployeeComponent {
   @ViewChild("createEmployee") public createEmployeeForm = NgForm;
+
+  public flag = true;
   formValues(firstName)
   {
     console.log(firstName);
