@@ -15,4 +15,8 @@ export class CreateEmployeeComponent {
     console.log(firstName);
   }
 
+  Save(empForm: NgForm): void {
+    console.log(empForm.value);
+  }
+
 }
